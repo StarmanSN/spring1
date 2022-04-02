@@ -1,10 +1,8 @@
+/*
 package ru.gb;
 
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import java.util.Arrays;
+import ru.gb.config.HelloConfiguration;
 
 public class HelloSpring {
     public static void main(String[] args) {
@@ -18,3 +16,4 @@ public class HelloSpring {
         context.close();
     }
 }
+*/

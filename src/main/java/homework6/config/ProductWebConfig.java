@@ -1,6 +1,6 @@
-/*
-package ru.gb.config;
+package homework6.config;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
@@ -9,14 +9,15 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
-public class WebConfig implements WebApplicationInitializer {
+@SpringBootApplication
+public class ProductWebConfig implements WebApplicationInitializer {
 
     public static final String DISPATCHER_SERVLET_NAME = "dispatcher";
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-        context.register(HelloConfiguration.class);
+        context.register(JpaConfig.class);
 
         DispatcherServlet dispatcherServlet = new DispatcherServlet(context);
 
@@ -26,4 +27,3 @@ public class WebConfig implements WebApplicationInitializer {
 
     }
 }
-*/
